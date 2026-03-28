@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@using Group2_Sportproject.Models
+@using Group2_Sportproject.Data
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject ApplicationDbContext _context
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
+
+        var profile = await _context.UserProfiles
+        .FirstOrDefaultAsync(p => p.IdentityUserId == user.Id);
+
+        <li class="nav-item">
+            <span class="nav-link text-white">
+                User ID: @user.Id |
+                Profile Found: @(profile != null ? "YES" : "NO") |
+                First Name: @(profile?.FirstName ?? "EMPTY")
+            </span>
+        </li>
+        <li class="nav-item">
+            <form method="post" asp-area="Identity" asp-page="/Account/Logout">
+                <button type="submit" class="btn btn-light btn-sm">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>
