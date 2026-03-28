@@ -311,3 +311,28 @@
 
         </div>
 }
+
+<!-- Javascript function to perform instant search upon typing -->
+<!-- Data is already loaded into table at this point / using already loaded data to search -->
+<!-- FUNCTION WILL SEARCH TEAM NAMES AND CITIES -->
+    <script>
+        function filterTeams() { //on keyup event - runs function
+            const input = document.getElementById("teamSearch");
+            const filter = input.value.toLowerCase();
+            const activePane = document.querySelector(".tab-pane.active"); // get active pane user is on
+            
+            // if no active pane, prevents script from running to avoid errors
+            if (!activePane) return; 
+
+            const rows = activePane.querySelectorAll("tbody tr"); // get all rows in the current active pane
+
+            rows.forEach(row => {
+                // team name stored at index 1n in tbl
+                const teamCell = row.querySelectorAll("td")[1];
+                if (!teamCell) return;
+
+                const teamName = teamCell.textContent.toLowerCase();
+                row.style.display = teamName.includes(filter) ? "" : "none"; // match team name with search input
+            });
+        }
+    </script>

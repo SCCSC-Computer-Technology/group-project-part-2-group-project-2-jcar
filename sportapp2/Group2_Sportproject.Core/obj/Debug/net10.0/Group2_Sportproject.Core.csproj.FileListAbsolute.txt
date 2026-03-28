@@ -22,3 +22,16 @@ C:\Users\Robert\Downloads\sportapp2\sportapp2\Group2_Sportproject.Core\obj\Debug
 C:\Users\Robert\Downloads\sportapp2\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\refint\Group2_Sportproject.Core.dll
 C:\Users\Robert\Downloads\sportapp2\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.pdb
 C:\Users\Robert\Downloads\sportapp2\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\ref\Group2_Sportproject.Core.dll
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\bin\Debug\net10.0\Group2_Sportproject.Core.deps.json
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\bin\Debug\net10.0\Group2_Sportproject.Core.dll
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\bin\Debug\net10.0\Group2_Sportproject.Core.pdb
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.csproj.AssemblyReference.cache
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.AssemblyInfoInputs.cache
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.AssemblyInfo.cs
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.csproj.CoreCompileInputs.cache
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.sourcelink.json
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.dll
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\refint\Group2_Sportproject.Core.dll
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\Group2_Sportproject.Core.pdb
+C:\Users\jbmoo\source\repos\group-project-part-2-group-project-2-jcar\sportapp2\Group2_Sportproject.Core\obj\Debug\net10.0\ref\Group2_Sportproject.Core.dll

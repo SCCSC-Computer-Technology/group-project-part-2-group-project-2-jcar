@@ -1,0 +1,85 @@
+# =========================
+# BUILD OUTPUTS
+# =========================
+bin/
+obj/
+out/
+
+# =========================
+# USER / MACHINE-SPECIFIC
+# =========================
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# =========================
+# DEBUG / BINARIES
+# =========================
+*.dll
+*.exe
+*.pdb
+*.bin
+
+# =========================
+# PACKAGE / NUGET
+# =========================
+*.nupkg
+.nuget/
+*.nuget.json
+project.assets.json
+*.assets.json
+
+# =========================
+# CACHE FILES
+# =========================
+*.cache
+*.cache.json
+*.vsidx
+
+# =========================
+# LOGS / TEMP FILES
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# DATABASES (LOCAL ONLY)
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# COMPRESSED FILES
+# =========================
+*.gz
+*.zip
+*.rar
+
+# =========================
+# VISUAL STUDIO SPECIFIC
+# =========================
+DocumentLayoutBackup.json
+*.opendb
+*.VC.db
+
+# =========================
+# ASP.NET / STATIC WEB ASSETS
+# =========================
+staticwebassets.build.json
+staticwebassets.build.endpoints.json
+staticwebassets.pack.json
+staticwebassets.remove.txt
+
+# =========================
+# KEEP THESE (DO NOT IGNORE)
+# =========================
+!.editorconfig
+!*.csproj
+!*.sln
+!*.props
+!*.json
+!appsettings*.json
