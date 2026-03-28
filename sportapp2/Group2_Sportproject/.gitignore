@@ -75,12 +75,6 @@ staticwebassets.pack.json
 staticwebassets.remove.txt
 
 # =========================
-# TEXT FILES (OPTIONAL)
-# Uncomment if these are logs/temp
-# =========================
-# *.txt
-
-# =========================
 # KEEP THESE (DO NOT IGNORE)
 # =========================
 !.editorconfig
