@@ -11,7 +11,8 @@ _Please follow the instructions below before running the application_
 
 1. Navigate to bar at top of solution
 2. Tools > NuGet Package Maneger > Package Manager Console
-3. Run:
+3. In the Console (Bottom of solution) Run:
+![Package Manager Console](Screenshots/PMConsole.png)
 ```
 Update-Database
 ```
