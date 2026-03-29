@@ -1,4 +1,5 @@
-# Sports App Group Project, 2 (Team: Robert, Caleb, Jason, Asher)
+# Sports App Group Project 2
+### Team: Robert, Caleb, Jason, Asher
 
 ## Description
 - This is a web-based app that allows users to login and view sports stats from the NFL and NBA. Including team/player stats, standings, and match results.
@@ -23,7 +24,9 @@ Note: This will update your database on your local machine to get the login func
 # Screenshots
 ### Home Screen
 ![Home Screen](Screenshots/HomePage.png)
+<br>
 ### NFL Screen
 ![NFL Screen](Screenshots/NFLScreen.png)
+<br>
 ### NBA Screen
 ![NBA Screen](Screenshots/NBAScreen.png)
