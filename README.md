@@ -1,1 +1,26 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ctfhiczA)
+# Sports App Group Project, 2 (Team: Robert, Caleb, Jason, Asher)
+
+## Description
+- This is a web-based app that allows users to login and view sports stats from the NFL and NBA. Including team/player stats, standings, and match results.
+
+## Getting Started:
+First time users (Required):
+*** Please follow the instructions below before running the application ***
+
+1. Navigate to bar at top of solution
+2. Tools > NuGet Package Maneger > Package Manager Console
+3. Run:
+```
+Update-Database
+```
+    Note: This will update your database on your local machine to get the login functionality working.
+
+## Technologies Used
+- ASP.NET Razor Pages
+- HTML/CSS/JS
+- C#
+
+# Screenshots
+![Home Screen](Screenshots/HomePage.png)
+![NFL Screen](Screenshots/NFLScreen.png)
+![NBA Screen](Screenshots/NBAScreen.png)
