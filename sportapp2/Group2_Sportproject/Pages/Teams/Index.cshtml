@@ -287,6 +287,12 @@
                                                                 <img src="@Model.GetNFLLogoPath(team.Team)"
                                                                      class="nfl-team-logo"
                                                                      onerror="this.src='/images/SportIcons/nfl.png';" />
+                                                                <a asp-page="/NFLPlayers"
+                                                                       asp-route-team="@team.Team"
+                                                                       asp-route-season="@Model.SelectedNFLSeason"
+                                                                       class="text-white text-decoration-none">
+                                                                    @team.Name
+                                                                </a>
 
                                                                 <span class="fw-bold">@team.Team</span>
                                                             </div>
