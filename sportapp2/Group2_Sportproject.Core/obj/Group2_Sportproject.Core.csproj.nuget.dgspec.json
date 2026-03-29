@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jbmoo\\source\\repos\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj": {}
+    "C:\\Users\\caleb\\source\\repos\\CPT-206-Group-Project-2\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jbmoo\\source\\repos\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj": {
+    "C:\\Users\\caleb\\source\\repos\\CPT-206-Group-Project-2\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbmoo\\source\\repos\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj",
+        "projectUniqueName": "C:\\Users\\caleb\\source\\repos\\CPT-206-Group-Project-2\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj",
         "projectName": "Group2_Sportproject.Core",
-        "projectPath": "C:\\Users\\jbmoo\\source\\repos\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj",
-        "packagesPath": "C:\\Users\\jbmoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbmoo\\source\\repos\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\obj\\",
+        "projectPath": "C:\\Users\\caleb\\source\\repos\\CPT-206-Group-Project-2\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj",
+        "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\caleb\\source\\repos\\CPT-206-Group-Project-2\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jbmoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
