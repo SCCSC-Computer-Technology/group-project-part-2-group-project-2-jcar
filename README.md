@@ -13,7 +13,7 @@ First time users (Required):
 ```
 Update-Database
 ```
-    Note: This will update your database on your local machine to get the login functionality working.
+Note: This will update your database on your local machine to get the login functionality working.
 
 ## Technologies Used
 - ASP.NET Razor Pages
@@ -21,6 +21,9 @@ Update-Database
 - C#
 
 # Screenshots
+### Home Screen
 ![Home Screen](Screenshots/HomePage.png)
+### NFL Screen
 ![NFL Screen](Screenshots/NFLScreen.png)
+### NBA Screen
 ![NBA Screen](Screenshots/NBAScreen.png)
