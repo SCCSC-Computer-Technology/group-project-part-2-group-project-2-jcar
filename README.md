@@ -1,5 +1,5 @@
 # Sports App Group Project 2
-### Team: Robert, Caleb, Jason, Asher
+### Team: Robert, Caleb, Jason
 
 ## Description
 - This is a web-based app that allows users to login and view sports stats from the NFL and NBA. Including team/player stats, standings, and match results.
@@ -22,6 +22,7 @@ _Note: This will update your database on your local machine to get the login fun
 - ASP.NET Razor Pages
 - HTML/CSS/JS
 - C#
+- SportsData.IO API [Link](https://sportsdata.io/developers/api-documentation/nfl)
 
 # Screenshots
 ### Home Screen
