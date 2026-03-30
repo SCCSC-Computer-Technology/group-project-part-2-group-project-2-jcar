@@ -1,5 +1,6 @@
 ﻿@page
 @model Group2_Sportproject.Pages.NFLPlayersModel
+
 <h1 class="display-4 mb-4">@Model.SelectedTeam Players</h1>
 
 <div class="table-responsive">
@@ -14,8 +15,13 @@
                    placeholder="Search player..." />
 
             <button type="submit" class="btn btn-primary">Search</button>
+
         </div>
+        <a asp-page="/Index" class="btn btn-outline-light">Back Home</a>
+
     </form>
+    <div class="nba-standings-card p-3 mb-4">
+
     <table class="table table-dark table-hover align-middle">
         <thead>
             <tr>
@@ -84,4 +90,5 @@
             }
         </tbody>
     </table>
+    </div>
 </div>

@@ -1,0 +1,61 @@
+﻿@page
+@model Group2_Sportproject.Pages.NBAMatchResultsModel
+@{
+    ViewData["Title"] = "NBA Match Results";
+}
+
+<div class="container py-4">
+
+    <div class="mb-4 d-flex justify-content-between align-items-center">
+        <h2>NBA Match Results</h2>
+        <a asp-page="/Index" class="btn btn-outline-light">Back Home</a>
+    </div>
+
+    <div class="nba-standings-card p-3 mb-4">
+        <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle standings-table mb-0">
+                <thead>
+                    <tr>
+                        <th>Home Team</th>
+                        <th>Home Score</th>
+                        <th>Away Score</th>
+                        <th>Away Team</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var game in Model.Games)
+                    {
+                        <tr>
+                            <td>@game.HomeTeam</td>
+                            <td>
+                                @if (game.HomeTeamScore > game.AwayTeamScore)
+                                {
+                                    <span class="fw-bold text-decoration-underline">@game.HomeTeamScore</span>
+                                }
+                                else
+                                {
+                                    @game.HomeTeamScore
+                                }
+                            </td>
+                            <td>
+                                @if (game.AwayTeamScore > game.HomeTeamScore)
+                                {
+                                    <span class="fw-bold text-decoration-underline">@game.AwayTeamScore</span>
+                                }
+                                else
+                                {
+                                    @game.AwayTeamScore
+                                }
+                            </td>
+                            <td>@game.AwayTeam</td>
+                            <td>@game.Status</td>
+                            <td>@game.Day.ToLocalTime().ToString("MM/dd/yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
