@@ -83,3 +83,5 @@ staticwebassets.remove.txt
 !*.props
 !*.json
 !appsettings*.json
+
+##

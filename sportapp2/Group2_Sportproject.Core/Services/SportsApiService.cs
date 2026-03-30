@@ -80,5 +80,25 @@ namespace Group2_Sportproject.Core.Services
             return JsonConvert.DeserializeObject<List<NFLPlayerSeasonStat>>(json)
                    ?? new List<NFLPlayerSeasonStat>();
         }
+
+        public async Task<List<NFLMatchResults>> GetNFLGamesAsync()
+        {
+            string season = "2025REG";
+            string url = $"https://api.sportsdata.io/v3/nfl/scores/json/Scores/{season}";
+
+            string json = await GetJsonAsync(url);
+
+            return JsonConvert.DeserializeObject<List<NFLMatchResults>>(json)
+                   ?? new List<NFLMatchResults>();
+        }
+
+        public async Task<List<NBAMatchResults>> GetNBAGamesAsync(string season)
+        {
+            string url = $"https://api.sportsdata.io/v3/nba/scores/json/Games/{season}";
+            string json = await GetJsonAsync(url);
+
+            return JsonConvert.DeserializeObject<List<NBAMatchResults>>(json)
+                   ?? new List<NBAMatchResults>();
+        }
     }
 }
