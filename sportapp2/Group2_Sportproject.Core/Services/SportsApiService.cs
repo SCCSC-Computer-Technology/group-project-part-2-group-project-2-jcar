@@ -100,5 +100,14 @@ namespace Group2_Sportproject.Core.Services
             return JsonConvert.DeserializeObject<List<NBAMatchResults>>(json)
                    ?? new List<NBAMatchResults>();
         }
+
+        public async Task<List<NBAPlayerSeasonStat>> GetNBAPlayerSeasonStatsAsync(string season)
+        {
+            string url = $"https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStats/{season}";
+            string json = await GetJsonAsync(url);
+
+            return JsonConvert.DeserializeObject<List<NBAPlayerSeasonStat>>(json)
+                   ?? new List<NBAPlayerSeasonStat>();
+        }
     }
 }

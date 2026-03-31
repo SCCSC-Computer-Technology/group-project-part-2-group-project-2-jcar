@@ -1,0 +1,121 @@
+﻿@page
+@model Group2_Sportproject.Pages.Players.NBAPlayerModel
+@{
+    var selectedTeam = Request.Query["team"].ToString();
+    var pageTitle = string.IsNullOrWhiteSpace(selectedTeam)
+        ? "NBA Player Season Totals"
+        : $"{selectedTeam} Player Season Totals";
+}
+
+<div class="container-fluid py-4">
+
+    <div class="mb-4">
+        <div class="text-warning fw-bold small text-uppercase mb-1">NBA Stats</div>
+        <h2 class="text-white fw-bold mb-1">@pageTitle</h2>
+
+        @if (!string.IsNullOrWhiteSpace(selectedTeam))
+        {
+            <p class="text-light mb-0">Showing season totals for @selectedTeam players.</p>
+        }
+        else
+        {
+            <p class="text-light mb-0">Showing season totals for all players.</p>
+        }
+    </div>
+
+    <div class="card bg-dark border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="d-flex align-items-end gap-3 flex-wrap">
+
+                <div>
+                    <label for="season" class="form-label text-white fw-semibold mb-1">Season</label>
+                    <select id="season"
+                            name="season"
+                            class="form-select form-select-sm"
+                            onchange="this.form.submit()">
+                        @foreach (var season in Model.AvailableSeasons)
+                        {
+                            if (season.Key == Model.SelectedSeason)
+                            {
+                                <option value="@season.Key" selected>@season.Value</option>
+                            }
+                            else
+                            {
+                                <option value="@season.Key">@season.Value</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div>
+                    <label for="search" class="form-label text-white fw-semibold mb-1">Search Player</label>
+                    <input id="search"
+                           name="search"
+                           type="text"
+                           value="@Model.SearchTerm"
+                           placeholder="Enter player name..."
+                           class="form-control form-control-sm"
+                           style="min-width: 220px;" />
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-light btn-sm">Search</button>
+                </div>
+
+                <div class="d-flex gap-2 ms-md-auto">
+                    <a asp-page="/Teams/Index" asp-route-league="nba" class="btn btn-outline-light btn-sm">
+                        Back to NBA Teams
+                    </a>
+                    <a asp-page="/NBAPlayer" class="btn btn-warning btn-sm">View All Players</a>
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(selectedTeam))
+                {
+                    <input type="hidden" name="team" value="@selectedTeam" />
+                }
+
+            </form>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger">
+            @Model.ErrorMessage
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle mb-0">
+                <thead>
+                    <tr class="text-uppercase small">
+                        <th>Player</th>
+                        <th>Team</th>
+                        <th>GP</th>
+                        <th>PTS</th>
+                        <th>AST</th>
+                        <th>REB</th>
+                        <th>STL</th>
+                        <th>BLK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var player in Model.PlayerStats)
+                    {
+                        <tr>
+                            <td class="fw-semibold">@player.Name</td>
+                            <td>@player.Team</td>
+                            <td>@(player.Games ?? 0)</td>
+                            <td>@((player.Points ?? 0).ToString("0.0"))</td>
+                            <td>@((player.Assists ?? 0).ToString("0.0"))</td>
+                            <td>@((player.Rebounds ?? 0).ToString("0.0"))</td>
+                            <td>@((player.Steals ?? 0).ToString("0.0"))</td>
+                            <td>@((player.BlockedShots ?? 0).ToString("0.0"))</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

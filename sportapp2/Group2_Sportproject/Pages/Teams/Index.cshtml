@@ -23,15 +23,15 @@
         </h1>
     </div>
 
-    @if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
-    {
+@if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+{
         <div class="alert alert-danger">
             <strong>Error:</strong> @Model.ErrorMessage
         </div>
-    }
+}
 
-    @if (Model.League == "nba")
-    {
+@if (Model.League == "nba")
+{
         <form method="get" class="nba-filter-bar mb-3">
             <input type="hidden" name="league" value="nba" />
 
@@ -137,7 +137,14 @@
                                                      onerror="this.style.display='none';" />
 
                                                 <div>
-                                                    <div class="fw-bold">@team.Name</div>
+                                                    <div class="fw-bold">
+                                                        <a asp-page="/NBAPlayer"
+                                                           asp-route-team="@team.Key"
+                                                           asp-route-season="@Model.SelectedSeason"
+                                                           class="text-white text-decoration-none">
+                                                            @team.Name
+                                                        </a>
+                                                    </div>
                                                     <small class="text-light">@team.City</small>
                                                 </div>
                                             </div>
@@ -194,7 +201,14 @@
                                                      onerror="this.style.display='none';" />
 
                                                 <div>
-                                                    <div class="fw-bold">@team.Name</div>
+                                                    <div class="fw-bold">
+                                                        <a asp-page="/NBAPlayer"
+                                                           asp-route-team="@team.Key"
+                                                           asp-route-season="@Model.SelectedSeason"
+                                                           class="text-white text-decoration-none">
+                                                            @team.Name
+                                                        </a>
+                                                    </div>
                                                     <small class="text-light">@team.City</small>
                                                 </div>
                                             </div>
@@ -217,7 +231,7 @@
 
             </div>
         </div>
-    }
+}
 
 @if (Model.League == "nfl")
 {
@@ -294,9 +308,9 @@
                                                                      class="nfl-team-logo"
                                                                      onerror="this.src='/images/SportIcons/nfl.png';" />
                                                                 <a asp-page="/NFLPlayers"
-                                                                       asp-route-team="@team.Team"
-                                                                       asp-route-season="@Model.SelectedNFLSeason"
-                                                                       class="text-white text-decoration-none">
+                                                                   asp-route-team="@team.Team"
+                                                                   asp-route-season="@Model.SelectedNFLSeason"
+                                                                   class="text-white text-decoration-none">
                                                                     @team.Name
                                                                 </a>
 
@@ -324,17 +338,17 @@
         </div>
 }
 
-<!-- Javascript function to perform instant search upon typing -->
-<!-- Data is already loaded into table at this point / using already loaded data to search -->
-<!-- FUNCTION WILL SEARCH TEAM NAMES AND CITIES -->
+    <!-- Javascript function to perform instant search upon typing -->
+    <!-- Data is already loaded into table at this point / using already loaded data to search -->
+    <!-- FUNCTION WILL SEARCH TEAM NAMES AND CITIES -->
     <script>
         function filterTeams() { //on keyup event - runs function
             const input = document.getElementById("teamSearch");
             const filter = input.value.toLowerCase();
             const activePane = document.querySelector(".tab-pane.active"); // get active pane user is on
-            
+
             // if no active pane, prevents script from running to avoid errors
-            if (!activePane) return; 
+            if (!activePane) return;
 
             const rows = activePane.querySelectorAll("tbody tr"); // get all rows in the current active pane
 

@@ -19,8 +19,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 })
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddRazorPages();
-builder.Services.AddScoped<SportsApiService>();
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizeFolder("/");
+}); builder.Services.AddScoped<SportsApiService>();
 
 var app = builder.Build();
 
