@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "x1qHvawJu6o=",
+  "dgSpecHash": "DkfCV4yowZ4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jbmoo\\source\\repos\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj",
+  "projectFilePath": "C:\\Users\\caleb\\source\\repos\\CPT-206-Group-Project-2\\group-project-part-2-group-project-2-jcar\\sportapp2\\Group2_Sportproject.Core\\Group2_Sportproject.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jbmoo\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
+    "C:\\Users\\caleb\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
   ],
   "logs": []
 }
