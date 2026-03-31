@@ -7,7 +7,7 @@ namespace Group2_Sportproject.Core.Services
     public class SportsApiService
     {
         private static readonly HttpClient _client = new HttpClient();
-        private const string ApiKey = "f6d43bd8239c4fe7a38abcac1c0cb30c";
+        private const string ApiKey = "8c7b4074a3d2420d953d9e872b124d19";
 
         private const string FixedNFLSeason = "2025REG";
 
