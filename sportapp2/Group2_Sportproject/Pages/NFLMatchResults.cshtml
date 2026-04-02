@@ -11,9 +11,17 @@
         <a asp-page="/Index" class="btn btn-outline-light">Back Home</a>
     </div>
 
+    <div class="search-filter-group">
+        <input type="text" id="homeTeamSearch" class="form-control" placeholder="Search Home Team..." onkeyup="filterTeams()" />
+    </div>
+
+    <div class="search-filter-group">
+        <input type="text" id="awayTeamSearch" class="form-control" placeholder="Search Away Team..." onkeyup="filterTeams()" />
+    </div>
+
     <div class="nba-standings-card p-3 mb-4">
         <div class="table-responsive">
-            <table class="table table-dark table-hover align-middle mb-0">
+            <table class="table table-dark table-hover align-middle standings-table mb-0">
                 <thead>
                     <tr>
                         <th>Home Team</th>
@@ -59,3 +67,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    function filterTeams() {
+        const homeInput = document.getElementById('homeTeamSearch').value.toLowerCase();
+        const awayInput = document.getElementById('awayTeamSearch').value.toLowerCase();
+
+        const table = document.querySelector('.standings-table tbody'); // Make sure table has class 'standings-table'
+        const rows = table.getElementsByTagName('tr');
+
+        for (let row of rows) {
+            const homeTeam = row.cells[0].innerText.toLowerCase();
+            const awayTeam = row.cells[3].innerText.toLowerCase();
+
+            const matchesHome = !homeInput || homeTeam.includes(homeInput);
+            const matchesAway = !awayInput || awayTeam.includes(awayInput);
+
+            row.style.display = (matchesHome && matchesAway) ? '' : 'none';
+        }
+    }
+</script>
